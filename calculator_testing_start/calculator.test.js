@@ -174,6 +174,29 @@ describe('even', () => {
 
 describe('odd', () => {
 
-  
+  test('is the positive number odd', () => {
+    expected = "is odd";
+    actual = odd(75);
+    expect(actual).toBe(expected);
+  });
+
+  test('is the negative number odd', () => {
+    expected = "is odd";
+    actual = odd(-57);
+    expect(actual).toBe(expected);
+  });
+
+  test('is the multiplication of two numbers odd', () => {
+    expected = "is odd";
+    actual = odd(multiply(15, 3));
+    expect(actual).toBe(expected);
+  });
+
+  test('is the multiplication of two numbers odd', () => {
+    expected = "is not odd";
+    actual = odd(multiply(30, 2));
+    expect(actual).toBe(expected);
+  });
+
 
 });
