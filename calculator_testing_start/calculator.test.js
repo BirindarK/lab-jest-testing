@@ -119,6 +119,29 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+  test('can find the remainder of two positive numbers', () => {
+    expected = 1;
+    actual = modulus(16, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can find the remainder of two negative numbers', () => {
+    expected = -2;
+    actual = modulus(-26, -4);
+    expect(actual).toBe(expected);
+  });
+
+  test('can find the remainder of a positive number and a negative number', () => {
+    expected = 3;
+    actual = modulus(33, -10);
+    expect(actual).toBe(expected);
+  });
+
+  test('can find the remainder using zero', () => {
+    expected = 0;
+    actual = modulus(0, 300);
+    expect(actual).toBe(expected);
+  });
 
 });
 
