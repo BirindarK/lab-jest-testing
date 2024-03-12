@@ -49,6 +49,12 @@ describe('subtract', () => {
     expect(actual).toBe(expected);
   });
 
+  test('can subtract two very small numbers', () => {
+    expected = 3e-9;
+    actual = subtract(6e-9, 3e-9);
+    expect(actual).toBe(expected);
+  });
+
   test('can subtract zero', () => {
     expected = 60;
     actual = subtract(60, 0);
@@ -58,6 +64,30 @@ describe('subtract', () => {
 });
 
 describe('multiply', () => {
+  test('can multiply two positive numbers', () => {
+    expected = 60;
+    actual = multiply(30, 2);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply two negative numbers', () => {
+    expected = 75;
+    actual = multiply(-25, -3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply one positive number and one negative number', () => {
+    expected = -90;
+    actual = multiply(30, -3);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply by zero', () => {
+    expected = 0;
+    actual = multiply(40, 0);
+    expect(actual).toBe(expected);
+  });
+
 
 });
 
