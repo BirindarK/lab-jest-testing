@@ -19,16 +19,22 @@ const modulus = function(a, b){
 }
 
 const even = function(a){
-    if (a % 2 === 0){
-        return "a is even";
+    if(a % 2 === 0){
+        return `is even`;
+    } else {
+        return `is not even`;
     }
 }
 
 const odd = function(a){
     if(a % 2 !== 0){
-        return "a is odd";
+        return `is odd`;
+    } else {
+        return `is not odd`;
     }
 }
+
+
 
 module.exports = { 
     sum, 

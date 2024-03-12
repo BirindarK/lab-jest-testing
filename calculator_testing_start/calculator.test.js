@@ -147,8 +147,33 @@ describe('modulus', () => {
 
 describe('even', () => {
 
+  test('is the positive number even', () => {
+    expected = "is even";
+    actual = even(12);
+    expect(actual).toBe(expected);
+  });
+
+  test('is the negative number even', () => {
+    expected = "is even";
+    actual = even(-22);
+    expect(actual).toBe(expected);
+  });
+
+  test('is zero even', () => {
+    expected = "is even";
+    actual = even(0);
+    expect(actual).toBe(expected);
+  });
+  test('is the sum of two numbers even', () => {
+    expected = "is not even";
+    actual = even(sum(3, 2));
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('odd', () => {
+
+  
 
 });
