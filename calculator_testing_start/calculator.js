@@ -18,21 +18,32 @@ const modulus = function(a, b){
     return a % b;
 }
 
-const even = function(a){
+// const even = function(a){
+//     if(a % 2 === 0){
+//         return `is even`;
+//     } else {
+//         return `is not even`;
+//     }
+// }
+
+// const odd = function(a){
+//     if(a % 2 !== 0){
+//         return `is odd`;
+//     } else {
+//         return `is not odd`;
+//     }
+// }
+
+//DRY Function
+
+const oddOrEven = function(a){
     if(a % 2 === 0){
         return `is even`;
     } else {
-        return `is not even`;
+        return `is odd`;
     }
 }
 
-const odd = function(a){
-    if(a % 2 !== 0){
-        return `is odd`;
-    } else {
-        return `is not odd`;
-    }
-}
 
 
 
@@ -42,6 +53,5 @@ module.exports = {
     multiply, 
     divide, 
     modulus, 
-    even, 
-    odd 
+    oddOrEven
 };

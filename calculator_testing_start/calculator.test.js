@@ -4,8 +4,7 @@ const {
   multiply,
   divide,
   modulus,
-  even,
-  odd,
+  oddOrEven
 } = require("./calculator");
 
 describe('sum', () => { 
@@ -145,58 +144,96 @@ describe('modulus', () => {
 
 });
 
-describe('even', () => {
+// describe('even', () => {
 
-  test('is the positive number even', () => {
+//   test('is the positive number even', () => {
+//     expected = "is even";
+//     actual = even(12);
+//     expect(actual).toBe(expected);
+//   });
+
+//   test('is the negative number even', () => {
+//     expected = "is even";
+//     actual = even(-22);
+//     expect(actual).toBe(expected);
+//   });
+
+//   test('is zero even', () => {
+//     expected = "is even";
+//     actual = even(0);
+//     expect(actual).toBe(expected);
+//   });
+//   test('is the sum of two numbers even', () => {
+//     expected = "is not even";
+//     actual = even(sum(3, 2));
+//     expect(actual).toBe(expected);
+//   });
+
+// });
+
+// describe('odd', () => {
+
+//   test('is the positive number odd', () => {
+//     expected = "is odd";
+//     actual = odd(75);
+//     expect(actual).toBe(expected);
+//   });
+
+//   test('is the negative number odd', () => {
+//     expected = "is odd";
+//     actual = odd(-57);
+//     expect(actual).toBe(expected);
+//   });
+
+//   test('is the multiplication of two numbers odd', () => {
+//     expected = "is odd";
+//     actual = odd(multiply(15, 3));
+//     expect(actual).toBe(expected);
+//   });
+
+//   test('is the division of two numbers odd', () => {
+//     expected = "is not odd";
+//     actual = odd(divide(30, 2));
+//     expect(actual).toBe(expected);
+//   });
+
+
+// });
+
+describe('oddOrEven', () => {
+  test('is the positive number odd or even', () => {
     expected = "is even";
-    actual = even(12);
+    actual = oddOrEven(12);
     expect(actual).toBe(expected);
   });
 
-  test('is the negative number even', () => {
+  test('is the negative number odd or even', () => {
     expected = "is even";
-    actual = even(-22);
+    actual = oddOrEven(-22);
     expect(actual).toBe(expected);
   });
 
-  test('is zero even', () => {
+  test('is zero odd or even', () => {
     expected = "is even";
-    actual = even(0);
+    actual = oddOrEven(0);
     expect(actual).toBe(expected);
   });
-  test('is the sum of two numbers even', () => {
-    expected = "is not even";
-    actual = even(sum(3, 2));
-    expect(actual).toBe(expected);
-  });
-
-});
-
-describe('odd', () => {
-
-  test('is the positive number odd', () => {
+  test('is the sum of two numbers odd or even', () => {
     expected = "is odd";
-    actual = odd(75);
+    actual = oddOrEven(sum(3, 2));
     expect(actual).toBe(expected);
   });
 
-  test('is the negative number odd', () => {
+    test('is the multiplication of two numbers odd or even', () => {
     expected = "is odd";
-    actual = odd(-57);
+    actual = oddOrEven(multiply(15, 3));
     expect(actual).toBe(expected);
   });
 
-  test('is the multiplication of two numbers odd', () => {
-    expected = "is odd";
-    actual = odd(multiply(15, 3));
+  test('is the division of two numbers odd or even', () => {
+    expected = "is even";
+    actual = oddOrEven(divide(60, 2));
     expect(actual).toBe(expected);
   });
-
-  test('is the multiplication of two numbers odd', () => {
-    expected = "is not odd";
-    actual = odd(multiply(30, 2));
-    expect(actual).toBe(expected);
-  });
-
 
 });
