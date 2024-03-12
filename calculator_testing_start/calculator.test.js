@@ -137,9 +137,9 @@ describe('modulus', () => {
   });
 
   test('can find the remainder using zero', () => {
-    expected = 0;
-    actual = modulus(0, 300);
-    expect(actual).toBe(expected);
+    expected = NaN;
+    actual = modulus(300, 0);
+    expect(actual).toBeNaN();
   });
 
 });
